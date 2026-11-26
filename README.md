@@ -138,3 +138,21 @@ icons/             16/32/48/128 图标
 
 `chrome://extensions/` → 找到「B站随机播放」→ 移除。
 队列数据在扩展本地存储里，卸载即清空，不影响 B 站账号的任何内容。
+
+---
+
+## 发版
+
+仓库带了个 GitHub Actions（`.github/workflows/release.yml`），推 tag 就自动打包发 Release：
+
+```bash
+# 1. 改 manifest.json 里的 version
+# 2. 打 tag 推上去
+git tag v1.0.1
+git push origin v1.0.1
+```
+
+它会自动 `zip` 一个干净的扩展包（排除 `.git`、`.github`、源码外的杂项）挂到对应的 Release 上，
+Release 说明用 GitHub 自动生成的变更记录。
+
+也可以在 Actions 页面手动触发（`workflow_dispatch`），不填 tag 时用 `v<manifest 版本号>`。

@@ -139,6 +139,27 @@ an 845-episode owner season:
 
 ---
 
+## Releasing
+
+The repo ships a GitHub Actions workflow (`.github/workflows/release.yml`).
+Pushing a tag builds and publishes the zip automatically:
+
+```bash
+# 1. bump "version" in manifest.json
+# 2. tag and push
+git tag v1.0.1
+git push origin v1.0.1
+```
+
+It zips a clean extension package (excluding `.git`, `.github` and other
+non-extension files) and attaches it to the matching release, with
+GitHub's generated release notes.
+
+You can also run it by hand from the Actions tab (`workflow_dispatch`);
+leaving the tag input empty uses `v<manifest version>`.
+
+---
+
 ## License
 
 MIT
