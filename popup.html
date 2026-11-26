@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="popup.css" />
+<title>B站随机播放</title>
+</head>
+<body>
+  <header>
+    <span class="logo"></span>
+    <h1>B站随机播放</h1>
+    <span class="ver">v1.0</span>
+  </header>
+
+  <section id="status" class="card hidden">
+    <div class="status-top">
+      <span class="label" id="st-label"></span>
+      <span class="count" id="st-count"></span>
+    </div>
+    <div class="now" id="st-now"></div>
+    <div class="mini-actions">
+      <button class="mini play" id="btn-next">▶ 播下一个</button>
+      <button class="mini" id="btn-reshuffle">重新洗牌</button>
+      <button class="mini ghost" id="btn-clear">停用</button>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>换一个队列</h2>
+
+    <div class="tabs">
+      <button class="tab active" data-tab="fav">收藏夹</button>
+      <button class="tab" data-tab="toview">稍后再看</button>
+      <button class="tab" data-tab="season">当前合集</button>
+      <button class="tab" data-tab="manual">手动 BV</button>
+    </div>
+
+    <div class="pane" data-pane="fav">
+      <div class="row">
+        <select id="fav-select"><option value="">— 加载中 —</option></select>
+        <button class="primary" id="btn-fav">打乱</button>
+      </div>
+      <p class="hint">读取你自己账号的收藏夹，数据只留在本地。</p>
+    </div>
+
+    <div class="pane hidden" data-pane="toview">
+      <button class="primary wide" id="btn-toview">打乱「稍后再看」</button>
+      <p class="hint">需要浏览器里已登录 B 站。</p>
+    </div>
+
+    <div class="pane hidden" data-pane="season">
+      <input id="season-url" class="input" placeholder="粘贴合集链接，如 space.bilibili.com/…/lists/123456" />
+      <button class="primary wide" id="btn-season-url">打乱这个合集</button>
+      <button class="primary wide ghost-line" id="btn-season">打乱当前视频所属合集</button>
+      <p class="hint">两种合集都行：space 页的「合集」和视频页内的合集。</p>
+    </div>
+
+    <div class="pane hidden" data-pane="manual">
+      <textarea id="manual-input" rows="4" placeholder="粘贴 BV 号或视频链接，一行一个（空格 / 逗号也能分隔）"></textarea>
+      <button class="primary wide" id="btn-manual">打乱这批</button>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>设置</h2>
+    <label class="opt"><input type="checkbox" id="opt-loop" /><span>播完最后一个后循环</span></label>
+    <label class="opt"><input type="checkbox" id="opt-reshuffle" /><span>每一轮重新洗牌</span></label>
+    <label class="opt"><input type="checkbox" id="opt-autonext" /><span>播完自动跳下一个</span></label>
+    <label class="opt"><input type="checkbox" id="opt-noshuffle" /><span>导入时按原顺序（不洗牌）</span></label>
+  </section>
+
+  <div class="msg" id="msg"></div>
+  <footer>本地运行 · 不收集任何数据</footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>

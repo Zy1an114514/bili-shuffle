@@ -1,0 +1,9 @@
+*.py
+_*
+.DS_Store
+Thumbs.db
+node_modules/
+*.zip
+*.crx
+*.pem
+_metadata/
