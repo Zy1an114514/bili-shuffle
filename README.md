@@ -1,5 +1,7 @@
 # B站随机播放 · Bili Shuffle
 
+**中文** | [English](README.en.md)
+
 把 B 站收藏夹 / 稍后再看 / 合集 / 任意一串 BV 号**打乱成随机队列**，一个视频播完自动跳下一个。
 
 Chrome / Edge 通用（Manifest V3），纯本地运行，不往任何服务器发数据。

@@ -1,5 +1,7 @@
 # Bili Shuffle — random playlist for Bilibili
 
+[中文](README.md) | **English**
+
 A tiny Manifest V3 extension that **shuffles a Bilibili playlist into a random queue**
 and keeps playing on its own. Works with favorites, Watch Later, UP-owner seasons
 (hundreds of episodes), and any pasted list of BV ids.
