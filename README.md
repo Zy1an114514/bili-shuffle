@@ -114,7 +114,7 @@ icons/             16/32/48/128 图标
 
 ## 实测记录（2026-11-25）
 
-在 Chrome 158 里用 CDP `Extensions.loadUnpacked` 真实装载，跑了你的「我的歌单 / 01」合集（mid 1608620213，season 6772384）：
+在 Chrome 158 里用 CDP `Extensions.loadUnpacked` 真实装载，跑了一个 845 集的 UP 主合集（space 页 `lists/` 那种）：
 
 - 845 集全部抓到，耗时 **2.8 秒**，队列 157 KB
 - 真实 B 站视频页上面板正常渲染：`322/845`、`下一个：…`

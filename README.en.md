@@ -125,7 +125,7 @@ Queue lives in `chrome.storage.local` under `bsQueue`:
 ## Verified
 
 Loaded for real in Chrome 158 through CDP `Extensions.loadUnpacked` against
-owner season 6772384 (845 episodes):
+an 845-episode owner season:
 
 - 845/845 fetched in **2.8 s**, queue is 157 KB
 - Panel renders on a real video page: `578/845`, `next: …`
